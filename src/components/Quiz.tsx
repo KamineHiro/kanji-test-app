@@ -48,6 +48,10 @@ const QuizHeader = styled.div`
   margin-bottom: 20px;
   flex-wrap: wrap;
   gap: 15px;
+
+  @media (max-width: 480px) {
+    gap: 10px;
+  }
 `;
 
 const LevelBadge = styled.div<{ difficulty: DifficultyLevel }>`
@@ -68,6 +72,12 @@ const LevelBadge = styled.div<{ difficulty: DifficultyLevel }>`
   }};
   color: white;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    padding: 6px 12px;
+    gap: 6px;
+  }
 `;
 
 const ChangeLevelButton = styled.button`
@@ -89,6 +99,11 @@ const ChangeLevelButton = styled.button`
 
   &:active {
     transform: translateY(0);
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    padding: 6px 12px;
   }
 `;
 

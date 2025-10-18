@@ -11,6 +11,16 @@ const QuestionText = styled.p`
   color: #333;
   margin-bottom: 25px;
   font-weight: 500;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
 `;
 
 const ImageContainer = styled.div`

@@ -11,18 +11,45 @@ const Title = styled.div`
   margin-bottom: 20px;
   color: #333;
   font-weight: bold;
+
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
 `;
 
 const ScoreText = styled.div`
   font-size: 18px;
   color: #666;
   margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    font-size: 17px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
 `;
 
 const Message = styled.div`
   font-size: 20px;
   color: #333;
   margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
 `;
 
 const ButtonContainer = styled.div`
@@ -55,6 +82,12 @@ const RestartButton = styled.button`
   &:active {
     transform: translateY(0);
   }
+
+  @media (max-width: 480px) {
+    min-width: 100%;
+    font-size: 15px;
+    padding: 11px 20px;
+  }
 `;
 
 const ChangeLevelButton = styled.button`
@@ -78,6 +111,12 @@ const ChangeLevelButton = styled.button`
 
   &:active {
     transform: translateY(0);
+  }
+
+  @media (max-width: 480px) {
+    min-width: 100%;
+    font-size: 15px;
+    padding: 11px 20px;
   }
 `;
 

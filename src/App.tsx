@@ -8,7 +8,7 @@ import Quiz from './components/Quiz';
 const AppContainer = styled.div`
   font-family: 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', sans-serif;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  min-height: 120vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 `;
@@ -20,6 +20,16 @@ const MainContent = styled.main`
   justify-content: center;
   padding: 40px 20px 40px 20px;
   min-height: calc(100vh - 200px);
+
+  @media (max-width: 768px) {
+    padding: 30px 15px 30px 15px;
+    min-height: calc(100vh - 180px);
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px 10px 20px 10px;
+    min-height: calc(100vh - 150px);
+  }
 `;
 
 const App: React.FC = () => {

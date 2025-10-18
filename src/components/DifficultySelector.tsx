@@ -30,6 +30,14 @@ const SelectorContainer = styled.div`
   padding: 40px 20px;
   max-width: 500px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 30px 15px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px 10px;
+  }
 `;
 
 const Title = styled.h1`
@@ -46,6 +54,10 @@ const Title = styled.h1`
   @media (max-width: 600px) {
     font-size: 28px;
   }
+
+  @media (max-width: 480px) {
+    font-size: 24px;
+  }
 `;
 
 const Subtitle = styled.p`
@@ -54,6 +66,16 @@ const Subtitle = styled.p`
   margin-bottom: 50px;
   line-height: 1.6;
   animation: ${fadeInUp} 0.8s ease-out 0.2s both;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
 `;
 
 const DifficultyList = styled.div`
@@ -99,6 +121,14 @@ const DifficultyCard = styled.button<{
     ${fadeInUp} 0.8s ease-out ${props.difficulty === 'beginner' ? '0.4s' : props.difficulty === 'intermediate' ? '0.6s' : '0.8s'} both;
   `};
 
+  @media (max-width: 768px) {
+    padding: 20px 25px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 18px 20px;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -136,6 +166,14 @@ const CardContent = styled.div`
   align-items: center;
   gap: 20px;
   text-align: left;
+
+  @media (max-width: 768px) {
+    gap: 15px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 12px;
+  }
 `;
 
 const DifficultyIcon = styled.div<{ difficulty: DifficultyLevel }>`
@@ -155,16 +193,31 @@ const DifficultyIcon = styled.div<{ difficulty: DifficultyLevel }>`
     }
   }};
   display: flex;
+
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+  }
+
+  @media (max-width: 480px) {
+    width: 45px;
+    height: 45px;
+  }
   align-items: center;
   justify-content: center;
   font-size: 28px;
   flex-shrink: 0;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+
+  @media (max-width: 480px) {
+    font-size: 24px;
+  }
 `;
 
 const DifficultyInfo = styled.div`
   flex: 1;
+  min-width: 0;
 `;
 
 const DifficultyTitle = styled.h3`
@@ -174,6 +227,15 @@ const DifficultyTitle = styled.h3`
   display: flex;
   align-items: center;
   gap: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+    gap: 8px;
+  }
 `;
 
 const DifficultyDescription = styled.p`
@@ -181,12 +243,26 @@ const DifficultyDescription = styled.p`
   opacity: 0.9;
   line-height: 1.4;
   margin: 0 0 10px 0;
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    margin: 0 0 8px 0;
+  }
 `;
 
 const DifficultyStats = styled.div`
   display: flex;
   gap: 15px;
   align-items: center;
+  flex-wrap: wrap;
+
+  @media (max-width: 480px) {
+    gap: 8px;
+  }
 `;
 
 const StatItem = styled.div`
@@ -196,6 +272,11 @@ const StatItem = styled.div`
   padding: 4px 8px;
   border-radius: 12px;
   backdrop-filter: blur(10px);
+
+  @media (max-width: 480px) {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
 `;
 
 const SelectedIndicator = styled.div`
@@ -233,6 +314,17 @@ const StartButton = styled.button<{ $isEnabled: boolean }>`
     : 'none'
   };
   animation: ${fadeInUp} 0.8s ease-out 1s both;
+
+  @media (max-width: 768px) {
+    padding: 14px 35px;
+    font-size: 17px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 12px 30px;
+    font-size: 16px;
+    width: 100%;
+  }
 
   &:hover {
     transform: ${props => props.$isEnabled ? 'translateY(-2px)' : 'none'};

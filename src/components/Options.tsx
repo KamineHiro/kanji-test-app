@@ -46,6 +46,16 @@ const OptionButton = styled.button<{
     return 'none';
   }} 0.6s ease;
 
+  @media (max-width: 768px) {
+    padding: 14px 18px;
+    font-size: 17px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+
   &:hover {
     background: ${props => {
       if (props.$isCorrect || props.$isIncorrect) return 'inherit';
