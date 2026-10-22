@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { useParams, useNavigate } from 'react-router-dom';
-import { KanjiQuestion, QuizState, QuizResult, DifficultyLevel } from '../types/kanji';
+import { KanjiQuestion, QuizState, DifficultyLevel } from '../types/kanji';
 import { getKanjiByDifficulty } from '../data/kanjiData';
 import { randomizeQuestions } from '../utils/quizUtils';
 import DifficultySelector from './DifficultySelector';
